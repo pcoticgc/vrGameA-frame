@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+	  <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-gamepad-controls/v0.5.0/dist/aframe-gamepad-controls.js"></script>
+	<!-- <script src="aframe/build/aframe-ar.min.js"></script>  Llamando a esta libreria se detecta la camara por defecto -->
+  </head>
+  <body>
+    <a-scene>
+
+	  <a-assets>
+      <audio id="neigh" src="sounds/Scott_Holmes_-_01_-_Driven_To_Success.mp3" autoplay loop ></audio>
+    </a-assets>
+
+<!-- A�adimos el puntero a la camara-->
+<a-entity camera
+            position="0 1 0"
+            look-controls
+            gamepad-controls
+
+  </a-entity>
+    <a-entity environment="preset: forest; dressingAmount: 500"></a-entity> <!--es un bosque infinito investigar que eenviroments mas existen o como hacerlos-->
+	  <a-sound src="#neigh"></a-sound>
+	</a-scene>
+  <div class="github-fork-ribbon-wrapper right">
+     <div class="github-fork-ribbon" style="background: #3482AA">
+       <a href="https://github.com/donmccurdy/aframe-gamepad-controls">Fork me on GitHub</a>
+     </div>
+   </div>
+  </body>
+</html>
